@@ -9,7 +9,7 @@
   .experience-title {
     font-size: 2.2rem;
     margin-bottom: 2rem;
-    color: #66ffcc;
+    color: #fff;
     text-align: center;
   }
   
@@ -66,16 +66,16 @@
   }
   
   .experience-right ul li {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.9rem;
     color: #e0e0e0;
     margin-bottom: 0.7rem;
+    text-align: justify;
   }
   
   /* Custom Bullet Points */
   .experience-right ul li::marker {
     color: #66ffcc;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
   
   /* Tech Stack Tags */
@@ -89,7 +89,7 @@
   .tag {
     background-color: rgba(102, 255, 204, 0.2);
     color: #66ffcc;
-    font-size: 0.9rem;
+    font-size: 0.5rem;
     font-weight: 600;
     padding: 6px 12px;
     text-transform: uppercase;
@@ -117,7 +117,7 @@
     }
   
     .tag {
-      font-size: 0.85rem;
+      font-size: 0.5rem;
     }
   }
   

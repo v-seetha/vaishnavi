@@ -164,7 +164,7 @@ function Home() {
   const [offsetX, setOffsetX] = useState(0);
   const [offsetY, setOffsetY] = useState(0);
   const [greeting, setGreeting] = useState('');
-  const [chartIndex] = useState(0);
+  const [chartIndex, setChartIndex] = useState(0);
 
   // Parallax effect for left text
   useEffect(() => {
@@ -185,25 +185,25 @@ function Home() {
     let newGreeting = "";
 
     if (hour >= 5 && hour < 7) {
-      const earlyMorning = ["Let's make today amazing! ☀️", "A fresh start to a brand-new day! 🌅", "Good morning!🌞"];
+      const earlyMorning = ["You're up early! Let's make today amazing! ☀️", "A fresh start to a brand-new day! 🌅", "Good morning, early riser! What’s on the agenda? 🌞"];
       newGreeting = earlyMorning[Math.floor(Math.random() * earlyMorning.length)];
     } else if (hour >= 7 && hour < 11) {
-      const morning = ["Morning sunshine! Ready to conquer the day? ☕", "A bright morning for bright ideas! 🌞"];
+      const morning = ["Morning sunshine! Ready to conquer the day? ☕", "A bright morning for bright ideas! 🌞", "Hey there! Let’s turn coffee into code! ☕💻"];
       newGreeting = morning[Math.floor(Math.random() * morning.length)];
     } else if (hour >= 11 && hour < 12) {
       const lateMorning = ["Almost lunchtime! Powering through? 🍽️", "Brunch time! Hope you’re having a great day! 🥑🍳"];
       newGreeting = lateMorning[Math.floor(Math.random() * lateMorning.length)];
     } else if (hour >= 12 && hour < 17) {
-      const afternoon = ["Hey! How’s your afternoon going? 🌤️", "Good Afternoon! 🌤️"];
+      const afternoon = ["Hey! How’s your afternoon going? 🌤️", "Hope your day is as productive as your data! 📊", "Still grinding? Take a deep breath—you got this! 💪"];
       newGreeting = afternoon[Math.floor(Math.random() * afternoon.length)];
     } else if (hour >= 17 && hour < 21) {
-      const evening = ["Good evening! Time to wind down or power up? 🌆", "Hope your day was insightful! Relax and recharge. 🍵"];
+      const evening = ["Good evening! Time to wind down or power up? 🌆", "The sun’s setting, but great ideas don’t! 🌅", "Hope your day was insightful! Relax and recharge. 🍵"];
       newGreeting = evening[Math.floor(Math.random() * evening.length)];
     } else if (hour >= 21 && hour < 23) {
       const night = ["The night is young, and so are your ideas! 🚀", "Still working? Late-night inspiration hits differently. 🌙✨", "Unwinding for the night or just getting started? 😏"];
       newGreeting = night[Math.floor(Math.random() * night.length)];
     } else if (hour >= 23 || hour < 2) {
-      const lateNight = ["Burning the midnight oil, I see! 🔥💡", "Happy Late Night!🌙✨"];
+      const lateNight = ["Burning the midnight oil, I see! 🔥💡", "The world sleeps, but innovators like you dream big. 🌌", "Another late-night coding session? Grab some tea! 🍵"];
       newGreeting = lateNight[Math.floor(Math.random() * lateNight.length)];
     } else {
       const deepNight = ["Up at this hour? AI never sleeps, and neither do great minds. 🤖💭"];
@@ -224,8 +224,9 @@ function Home() {
       >
         <h2 className="ai-greeting">{greeting}, I'm</h2>
         <h1 className="hero-name">Vaishnavi Seetharaman</h1>
-        <p className="hero-tagline">A Data Analyst who makes sense of complex data to fuel innovation</p>
+        <p className="hero-tagline">A Data Analyst who brings data to life through AI-powered analytics</p>
         <div class="button-section">
+        
     <button className='hero-button' onClick={() => window.open('https://www.linkedin.com/in/v-seetha', '_blank')}>
     <img 
             src="  https://img.icons8.com/?size=100&id=8808&format=png&color=22C3E6" 
@@ -240,9 +241,9 @@ function Home() {
             className="button-icon"
         /> 
     </button>
-    <button className='hero-button' onClick={() => window.open('vseetha6@asu.edu', '_blank')}>
+    <button className='hero-button' onClick={() => window.open('https://www.linkedin.com/in/v-seetha', '_blank')}>
     <img 
-            src=" https://img.icons8.com/?size=100&id=12623&format=png&color=22C3E6" 
+            src=" https://img.icons8.com/?size=100&id=60688&format=png&color=22C3E6" 
             alt="Email" 
             className="button-icon"
         /> 
