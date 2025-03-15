@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: #0f0f0f;
+  font-family: 'Poppins', sans-serif;
+  color: #f0f0f0;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  padding: 0 5vw;
+  overflow: hidden;
+}
+
+/* Left Column */
+.hero-left {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease-out;
+}
+.ai-greeting {
+  font-size: 1.5rem;
+  color: #66ffcc;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 1s ease-in-out;
+  text-shadow: 0 0 8px #66ffcc;
+}
+.hero-name {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 1.2s ease-in-out;
+}
+.hero-tagline {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  animation: fadeIn 1.4s ease-in-out;
+}
+.hero-button {
+  background-color: transparent;
+  width:60px;
+  border-color: transparent;
+  color: #66ffcc;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out, transform 0.2s;
+  animation: fadeIn 1.6s ease-in-out;
+  cursor: pointer;
+}
+.hero-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Right Column */
+.hero-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Chart Carousel */
+.chart-carousel {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  animation: fadeIn 2s ease-in-out;
+}
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.button-icon{
+  width: 40px;
+}
+/* Axis Labels */
+.axis-label {
+  position: absolute;
+  font-size: 0.9rem;
+  color: #66ffcc;
+  opacity: 0.8;
+  text-shadow: 0 0 6px #66ffcc;
+}
+.x-axis-label {
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.y-axis-label {
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+/* --- Bar Chart Styles --- */
+.chart-bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.chart-bar .chart-axis {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.chart-bar .x-axis {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #66ffcc;
+}
+.chart-bar .y-axis {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #66ffcc;
+}
+.bar-chart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.bar-chart .bar {
+  width: 40px;
+  height: var(--final-height);
+  background-color: #66ffcc;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  animation: growBar 2s ease-out forwards;
+}
+.bar-chart .bar:nth-child(1) { animation-delay: 0.2s; }
+.bar-chart .bar:nth-child(2) { animation-delay: 0.4s; }
+.bar-chart .bar:nth-child(3) { animation-delay: 0.6s; }
+.bar-chart .bar:nth-child(4) { animation-delay: 0.8s; }
+.bar-chart .bar:nth-child(5) { animation-delay: 1s; }
+.bar-chart .bar:nth-child(6) { animation-delay: 1.2s; }
+@keyframes growBar {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+/* --- Line Chart Styles --- */
+.line-chart {
+  width: 100%;
+  height: 100%;
+}
+.line-chart .line-path {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: drawLine 3s forwards;
+}
+@keyframes drawLine {
+  to { stroke-dashoffset: 0; }
+}
+
+/* --- Pie Chart Styles --- */
+.pie-chart {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.pie-chart .pie-data {
+  transition: stroke-dashoffset 2s ease-out;
+  animation: drawPie 3s forwards;
+}
+@keyframes drawPie {
+  to { stroke-dashoffset: 100; }
+}
+
+/* --- Area Chart Styles --- */
+.area-chart {
+  width: 100%;
+  height: 100%;
+}
+.area-chart .area-line {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: drawLine 3s forwards;
+}
+
+/* --- Radar Chart Styles --- */
+.radar-chart {
+  width: 100%;
+  height: 100%;
+}
+.radar-chart polygon {
+  animation: rotateRadar 8s linear infinite;
+}
+@keyframes rotateRadar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* --- Bubble Chart Styles --- */
+.bubble-chart {
+  width: 100%;
+  height: 100%;
+}
+.bubble-chart .bubble {
+  animation: bounceBubble 3s ease-in-out infinite;
+}
+@keyframes bounceBubble {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* --- Scatter Plot Styles --- */
+.scatter-plot {
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Neural Network Chart Styles --- */
+.neural-chart {
+  width: 100%;
+  height: 100%;
+}
+.neural-chart circle {
+  transform-origin: center;
+  animation: pulse 2s infinite ease-in-out;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

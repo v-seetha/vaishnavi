@@ -1,0 +1,111 @@
+.about-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100%;
+}
+
+/* Left Side: About Text */
+.about-text {
+  flex: 1;
+  max-width: 600px;
+  color: #f0f0f0;
+  text-align: justify;
+}
+
+.about-text h2 {
+  font-size: 2.2rem;
+  color: #66ffcc;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Right Side: Lottie Animation */
+.about-animation {
+  flex: 1;
+  max-width: 400px;
+}
+
+.about-animation lottie-player {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-animation {
+    max-width: 300px;
+  }
+}
+/* Add these styles to your Section.css file */
+
+.skills-container {
+  margin-top: 1cm;
+}
+
+.skills-section {
+  margin-bottom: 1rem;
+}
+
+.skills-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #66ffcc;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.skill-tag {
+  background-color: rgba(102, 255, 204, 0.1);
+  padding: 4px 4px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #f0f0f0;
+  border: 1px solid rgba(102, 255, 204, 0.3);
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background-color: rgba(102, 255, 204, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 255, 204, 0.2);
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+  .skills-grid {
+    gap: 8px;
+  }
+  
+  .skill-tag {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}

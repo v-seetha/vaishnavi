@@ -1,0 +1,128 @@
+.projects-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+/* Section Title */
+.projects-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #66ffcc;
+}
+
+.projects-section p {
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+/* Individual Project Container */
+.project-card-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #1f1f1f;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Left Column */
+.project-info {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #66ffcc;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  background-color: #66ffcc;
+  color: #0f0f0f;
+  padding: 3px;
+  font-size: 0.8rem;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+/* Buttons */
+.project-links {
+  margin-top: auto; /* Pushes buttons to the bottom if needed */
+}
+
+.btn-case-study,
+.btn-live-demo {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-case-study {
+  background-color: #66ffcc;
+  color: #0f0f0f;
+}
+
+.btn-case-study:hover {
+  background-color: #55e6b6;
+}
+
+.btn-live-demo {
+  background-color: #ff6961;
+  color: #ffffff;
+}
+
+.btn-live-demo:hover {
+  background-color: #ff5c53;
+}
+
+/* Right Column (GIF or Image) */
+.project-media {
+  flex: 1;
+  min-width: 400px; /* Adjust as needed */
+  background-color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-media img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .project-card-container {
+    flex-direction: column;
+  }
+
+  .project-media {
+    min-width: auto;
+    height: auto; 
+  }
+}
+.highlight {
+  font-weight: bold;
+  color: #ffcc00; /* Highlight color (gold/yellow) */
+}

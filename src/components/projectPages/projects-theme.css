@@ -1,0 +1,106 @@
+/* Overall page container: dark background, light text */
+.mgh-page {
+    background-color: #1f1f1f;
+    color: #f0f0f0;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: sans-serif;
+  }
+  
+  /* Main Title */
+  .mgh-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .mgh-gif-img{
+    width: 100lvh;
+    justify-content: center;
+  }
+  
+  /* Meta Section Container */
+  .mgh-meta {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Each meta section: label and tags/links in one line */
+  .mgh-meta-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .mgh-subtitle{
+    font-size: 0.9rem;
+  }
+  /* Fixed-width label so tags always start in the same place */
+  .mgh-meta-label {
+   margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #f0f0f0;
+    min-width: 100px; /* adjust this value as needed */
+    text-align: left;
+  }
+  
+  /* Tag styling */
+  .mgh-meta-tag {
+    padding: 0.2rem;
+    margin: 0.2rem;
+    font-size: 0.85rem;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  /* Color variants */
+  .mgh-red {
+    background-color: #ff5c53;
+  }
+  
+  .mgh-purple {
+    background-color: #9b59b6;
+  }
+  
+  /* Link styling within meta section */
+  .mgh-meta-link {
+    color: #66ffcc;
+    text-decoration: underline;
+    font-size: 0.85rem;
+    line-break: anywhere;
+  }
+  
+  /* "Back to Homepage" Link */
+  .mgh-home-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: #66ffcc;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: 1px solid #66ffcc;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+  }
+  .mgh-home-link:hover {
+    background-color: #66ffcc;
+    color: #0f0f0f;
+  }
+  
+  /* Section Titles */
+  .mgh-section-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #66ffcc;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+  
+  /* Paragraph Text */
+  .mgh-paragraph {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
